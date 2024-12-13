@@ -2,7 +2,9 @@ const Project = require("../model/Project");
 
 exports.create = async (req, res) => {
     try {
-        if (Project.findOne({ name: req.body?.name })) {
+        let project = await Project.findOne({ name: req.body?.name, admin: req.body?.admin });
+        if (project) {
+            console.log("Project with name already exists");
             return res
                 .status(400)
                 .json({ message: `Project with name "${req.body?.name}" already exists` });
