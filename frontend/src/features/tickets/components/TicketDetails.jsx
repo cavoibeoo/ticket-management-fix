@@ -65,7 +65,7 @@ export const TicketDetails = () => {
             <Stack flex={2} component={Paper} elevation={6} p={2}>
                 <Typography variant="h5">Comments</Typography>
                 <Stack mt={2} height={"40rem"} sx={{ overflowY: "scroll" }}>
-                    {comments.map((comment, index) => (
+                    {comments?.map((comment, index) => (
                         <Stack
                             p={2}
                             spacing={2}

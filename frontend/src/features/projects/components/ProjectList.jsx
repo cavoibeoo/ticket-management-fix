@@ -25,7 +25,7 @@ export const ProjectList = () => {
             });
             setProjects(filteredProjects);
         } else setProjects(defaultProjects);
-    }, [searchPrj]);
+    }, [searchPrj, defaultProjects]);
 
     const navigate = useNavigate();
 

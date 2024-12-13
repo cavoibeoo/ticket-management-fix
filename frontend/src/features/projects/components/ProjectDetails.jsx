@@ -215,7 +215,7 @@ export const ProjectDetails = () => {
                                                 width={"100%"}
                                                 container
                                             >
-                                                {selectedProject.members.map((member) => (
+                                                {selectedProject?.members?.map((member) => (
                                                     <Stack
                                                         width={"20rem"}
                                                         item
@@ -270,7 +270,7 @@ export const ProjectDetails = () => {
                                                                     )
                                                                 }
                                                             >
-                                                                {members.map(
+                                                                {members?.map(
                                                                     (member) =>
                                                                         // Check if member._id is present inside selectProjectmembers
                                                                         // If it's present, don't render the MenuItem
@@ -659,7 +659,7 @@ export const ProjectDetails = () => {
                                                 id="demo-simple-select"
                                                 label={"Assigned To"}
                                             >
-                                                {selectedProject.members.map((member) => (
+                                                {selectedProject?.members?.map((member) => (
                                                     <MenuItem key={member._id} value={member._id}>
                                                         {member.name}
                                                     </MenuItem>
